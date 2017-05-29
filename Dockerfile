@@ -32,7 +32,6 @@ RUN pip install --upgrade pip \
  pyOpenSSL \
  ndg-httpsclient pyasn1 \
  six==1.6.0 \
- 'requests[security]' \
  jupyter \
  numpy \
  scipy \

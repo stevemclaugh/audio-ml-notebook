@@ -26,7 +26,8 @@ RUN apt-get update && apt-get install -y \
  ipython \
  ipython-notebook \
  youtube-dl \
- python-matplotlib
+ python-matplotlib \
+ python-imaging-tk
 
 RUN pip install --upgrade pip \
  && pip install -U \

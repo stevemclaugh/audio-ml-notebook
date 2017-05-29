@@ -24,7 +24,10 @@ RUN apt-get update && apt-get install -y \
  libffi-dev \
  libssl-dev \
  ipython \
- ipython-notebook
+ ipython-notebook \
+ youtube-dl \
+ libfreetype6-dev \
+ libxft-dev
 
 RUN pip install --upgrade pip \
  && pip install -U \

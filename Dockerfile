@@ -31,8 +31,11 @@ RUN apt-get update && apt-get install -y \
  && pip install 'requests[security]' \
  && pip install -U jupyter numpy scipy matplotlib pandas \
  && pip install -U sklearn pydub tqdm requests \
- && pip install pyAudioAnalysis \
- && pip https://github.com/hipstas/audio-tagging-toolkit
+ && pip install pyAudioAnalysis
+
+# pip install https://github.com/hipstas/audio-tagging-toolkit
+# pip install git+git://github.com/hipstas/audio-tagging-toolkit.git
+
 
  # Install FFmpeg with mp3 support
  RUN add-apt-repository -y ppa:mc3man/trusty-media \

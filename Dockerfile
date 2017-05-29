@@ -31,14 +31,13 @@ RUN apt-get update && apt-get install -y \
  && pip install 'requests[security]' \
  && pip install -U jupyter numpy scipy matplotlib pandas \
  && pip install -U sklearn pydub tqdm requests \
- && pip install pyAudioAnalysis
+ && pip install pyAudioAnalysis \
+ && pip https://github.com/hipstas/audio-tagging-toolkit
 
- # Install FFmpeg with mp3 support \
+ # Install FFmpeg with mp3 support
  RUN add-apt-repository -y ppa:mc3man/trusty-media \
-  && apt-get update -y \
-  && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
-
-#RUN pip https://github.com/hipstas/audio-tagging-toolkit
+ && apt-get update -y \
+ && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
 # Configure container startup
 ENV SHELL /bin/bash

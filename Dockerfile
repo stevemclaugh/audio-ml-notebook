@@ -38,7 +38,6 @@ RUN apt-get update && apt-get install -y \
   && apt-get update -y \
   && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
-
 #RUN pip https://github.com/hipstas/audio-tagging-toolkit
 
 # Configure container startup

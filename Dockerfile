@@ -48,7 +48,7 @@ RUN pip install --upgrade pip \
 
 
  # Install FFmpeg with mp3 support
- RUN add-apt-repository -y ppa:mc3man/trusty-media \
+RUN add-apt-repository -y ppa:mc3man/trusty-media \
  && apt-get update -y \
  && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 

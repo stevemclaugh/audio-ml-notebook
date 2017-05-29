@@ -43,13 +43,13 @@ RUN pip install -U pip \
  scipy \
  matplotlib
 
-RUN pip install -U \
- pandas \
- sklearn \
- pydub \
- tqdm \
- && pip install \
- pyAudioAnalysis
+#RUN pip install -U \
+# pandas \
+# sklearn \
+# pydub \
+# tqdm \
+# && pip install \
+# pyAudioAnalysis
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git

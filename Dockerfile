@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install -y \
  ipython-notebook \
  youtube-dl \
  python-matplotlib \
- python-imaging-tk
+ libfreetype6-dev \
+ libxft-dev
 
 RUN pip install --upgrade pip \
  && pip install -U \

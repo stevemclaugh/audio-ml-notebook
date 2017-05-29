@@ -32,8 +32,7 @@ RUN apt-get update && apt-get install -y \
  libpng-dev \
  libpython-all-dev \
  gcc \
- gfortran \
- dvipdf
+ gfortran
 
 RUN pip install -U pip \
  && pip install -U \

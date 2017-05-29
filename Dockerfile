@@ -51,15 +51,13 @@ RUN pip install -U \
  && pip install \
  pyAudioAnalysis
 
-
 # pip install https://github.com/hipstas/audio-tagging-toolkit
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git
 
-
- # Install FFmpeg with mp3 support
-RUN add-apt-repository -y ppa:mc3man/trusty-media \
- && apt-get update -y \
- && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
+# Install FFmpeg with mp3 support
+#RUN add-apt-repository -y ppa:mc3man/trusty-media \
+# && apt-get update -y \
+# && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
 # Configure container startup
 ENV SHELL /bin/bash

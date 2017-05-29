@@ -32,15 +32,16 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install -U pip \
  && pip install -U \
- pyparsing \
- pyOpenSSL \
- ndg-httpsclient \
- pyasn1 \
- six==1.6.0 \
- requests \
- jupyter \
- numpy \
- scipy
+ pyparsing 
+# pyOpenSSL \
+# ndg-httpsclient \
+# pyasn1 \
+# six==1.6.0 \
+# requests \
+# jupyter \
+# numpy \
+# scipy
+
 
 #RUN pip install -U \
 # matplotlib \

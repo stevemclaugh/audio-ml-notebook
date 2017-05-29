@@ -28,26 +28,34 @@ RUN apt-get update && apt-get install -y \
  youtube-dl \
  python-matplotlib \
  libfreetype6-dev \
- libxft-dev
+ libxft-dev \
+ libpng-dev \
+ libpython-all-dev \
+ gcc \
+ gfortran \
+ dvipdf
 
 RUN pip install -U pip \
  && pip install -U \
- pyparsing 
-# pyOpenSSL \
-# ndg-httpsclient \
-# pyasn1 \
-# six==1.6.0 \
+ pyparsing \
+ appdirs \
+ pyOpenSSL \
+ ndg-httpsclient \
+ pyasn1 \
+ six==1.6.0 \
+ pyAudioAnalysis \
+ pydub
 # requests \
 # jupyter \
-# numpy \
-# scipy
+## numpy \
+## scipy
 
 
 #RUN pip install -U \
-# matplotlib \
+## matplotlib \
 # pandas \
-# sklearn \
-# pydub \
+## sklearn \
+#  \
 # tqdm \
 # && pip install \
 # pyAudioAnalysis

@@ -70,4 +70,4 @@ RUN pip install -U pip \
 # Configure container startup
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
-CMD ["jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"]
+CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root

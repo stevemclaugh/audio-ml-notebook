@@ -27,11 +27,21 @@ RUN apt-get update && apt-get install -y \
  ipython-notebook
 
 RUN pip install --upgrade pip \
- && pip install -U pyOpenSSL ndg-httpsclient pyasn1 \
- && pip install -U six==1.6.0 \
- && pip install 'requests[security]' \
- && pip install -U jupyter numpy scipy matplotlib pandas \
- && pip install -U sklearn pydub tqdm requests \
+ && pip install -U \
+ pyparsing \
+ pyOpenSSL \
+ ndg-httpsclient pyasn1 \
+ six==1.6.0 \
+ 'requests[security]' \
+ jupyter \
+ numpy \
+ scipy \
+ matplotlib \
+ pandas \
+ sklearn \
+ pydub \
+ tqdm \
+ requests \
  && pip install pyAudioAnalysis
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit

@@ -30,8 +30,10 @@ RUN pip install --upgrade pip \
  && pip install -U \
  pyparsing \
  pyOpenSSL \
- ndg-httpsclient pyasn1 \
+ ndg-httpsclient \
+ pyasn1 \
  six==1.6.0 \
+ requests \
  jupyter \
  numpy \
  scipy \
@@ -40,7 +42,6 @@ RUN pip install --upgrade pip \
  sklearn \
  pydub \
  tqdm \
- requests \
  && pip install pyAudioAnalysis
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit

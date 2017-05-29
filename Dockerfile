@@ -42,11 +42,12 @@ RUN pip install --upgrade pip \
  numpy \
  scipy \
  matplotlib \
- pandas \
- sklearn \
- pydub \
- tqdm \
- && pip install pyAudioAnalysis
+ #pandas \
+ #sklearn \
+ #pydub \
+ #tqdm \
+ #&& pip install pyAudioAnalysis
+
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git

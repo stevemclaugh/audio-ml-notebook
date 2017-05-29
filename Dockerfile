@@ -24,9 +24,10 @@ RUN apt-get update && apt-get install -y \
  libffi-dev \
  libssl-dev \
  ipython \
- ipython-notebook \
- && pip install --upgrade pip \
- && pip install pyOpenSSL ndg-httpsclient pyasn1 \
+ ipython-notebook
+
+RUN pip install --upgrade pip \
+ && pip install -U pyOpenSSL ndg-httpsclient pyasn1 \
  && pip install -U six==1.6.0 \
  && pip install 'requests[security]' \
  && pip install -U jupyter numpy scipy matplotlib pandas \

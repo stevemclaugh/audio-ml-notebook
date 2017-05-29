@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
  libfreetype6-dev \
  libxft-dev
 
-RUN pip install --upgrade pip \
+RUN pip install -U pip \
  && pip install -U \
  pyparsing \
  pyOpenSSL \
@@ -41,12 +41,15 @@ RUN pip install --upgrade pip \
  jupyter \
  numpy \
  scipy \
- matplotlib \
- #pandas \
- #sklearn \
- #pydub \
- #tqdm \
- #&& pip install pyAudioAnalysis
+ matplotlib
+
+RUN pip install -U \
+ pandas \
+ sklearn \
+ pydub \
+ tqdm \
+ && pip install \
+ pyAudioAnalysis
 
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit

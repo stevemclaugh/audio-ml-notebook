@@ -40,10 +40,10 @@ RUN pip install -U pip \
  requests \
  jupyter \
  numpy \
- scipy \
- matplotlib
+ scipy
 
 #RUN pip install -U \
+# matplotlib \
 # pandas \
 # sklearn \
 # pydub \

@@ -47,9 +47,10 @@ RUN apt-get update && apt-get install -y \
  numpy \
  jupyter \
  pandas \
- matplotlib
+ matplotlib \
+ scipy \
+ sklearn
 
- #scipy \
  #matplotlib \
  #pandas
 

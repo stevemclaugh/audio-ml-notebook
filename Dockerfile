@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
  software-properties-common \
  build-essential \
  unzip \
+ sox \
  libimage-exiftool-perl \
  python2.7 \
  python-pip \

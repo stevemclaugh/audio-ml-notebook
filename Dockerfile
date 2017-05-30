@@ -35,6 +35,9 @@ RUN apt-get update && apt-get install -y \
  gfortran \
  libpulse-dev \
  libsndfile1-dev \
+ aubio-tools \
+ libaubio-dev \
+ libaubio-doc \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \
@@ -53,6 +56,7 @@ RUN apt-get update && apt-get install -y \
  scipy \
  sklearn \
  librosa \
+ aubio \
  scikits.audiolab \
  pyAudioAnalysis \
  pocketsphinx \

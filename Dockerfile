@@ -70,6 +70,7 @@ RUN add-apt-repository -y ppa:mc3man/trusty-media \
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
 CMD git clone https://github.com/danstowell/smacpy.git
+CMD git clone https://github.com/hipstas/audio-tagging-toolkit.git
 CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
 
 # Launch container and open notebook like so:

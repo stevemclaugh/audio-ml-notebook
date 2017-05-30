@@ -38,9 +38,11 @@ RUN apt-get update && apt-get install -y \
  requests \
  && pip install \
  six \
- numpy
+ numpy \
+ scipy \
+ && pip install -U \
+ jupyter
 
-# jupyter \
 
  #scipy \
  #matplotlib \
@@ -49,7 +51,7 @@ RUN apt-get update && apt-get install -y \
 # sklearn \
 # pydub \
 # tqdm \
-# && pip install \
+#
 # pyAudioAnalysis
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit

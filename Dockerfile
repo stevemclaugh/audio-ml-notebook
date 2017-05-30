@@ -32,8 +32,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install -U pip \
  && pip install -U \
- pyparsing
-# pyOpenSSL \
+ pyparsing \
+ pyOpenSSL \
 # ndg-httpsclient \
 # pyasn1 \
 # six==1.6.0 \

@@ -37,13 +37,15 @@ RUN apt-get update && apt-get install -y \
  pyasn1 \
  requests \
  && pip install \
- six==1.6.0 \
- && pip install -U \
- jupyter \
- numpy \
- scipy \
- matplotlib \
- pandas
+ six==1.6.0 
+
+
+ #&& pip install -U \
+ #jupyter \
+ #numpy \
+ #scipy \
+ #matplotlib \
+ #pandas
 
 # sklearn \
 # pydub \

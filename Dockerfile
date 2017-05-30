@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
  ipython-notebook \
  youtube-dl \
  python-matplotlib \
+ python-scipy \
  libfreetype6-dev \
  libxft-dev \
  libpng-dev \

@@ -28,10 +28,12 @@ RUN apt-get update && apt-get install -y \
  youtube-dl \
  python-matplotlib \
  libfreetype6-dev \
- libxft-dev
+ libxft-dev \
+ && pip install -U pip
 
-RUN pip install -U pip 
- #&& pip install -U
+
+
+#&& pip install -U
 
 # pyOpenSSL
 # ndg-httpsclient \

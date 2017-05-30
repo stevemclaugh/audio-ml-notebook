@@ -27,35 +27,27 @@ RUN apt-get update && apt-get install -y \
  ipython-notebook \
  youtube-dl \
  python-matplotlib \
- python-scipy \
  libfreetype6-dev \
- libxft-dev \
- libpng-dev \
- libpython-all-dev \
- gcc \
- gfortran
+ libxft-dev
 
 RUN pip install -U pip \
  && pip install -U \
- pyparsing \
- appdirs \
- pyOpenSSL \
- ndg-httpsclient \
- pyasn1 \
- six==1.6.0 \
- pyAudioAnalysis \
- pydub
+ pyparsing
+# pyOpenSSL \
+# ndg-httpsclient \
+# pyasn1 \
+# six==1.6.0 \
 # requests \
 # jupyter \
-## numpy \
-## scipy
+# numpy \
+# scipy
 
 
 #RUN pip install -U \
-## matplotlib \
+# matplotlib \
 # pandas \
-## sklearn \
-#  \
+# sklearn \
+# pydub \
 # tqdm \
 # && pip install \
 # pyAudioAnalysis

@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
  liblapack-dev \
  libatlas-base-dev \
  gfortran \
+ pulseaudio \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \
@@ -51,10 +52,17 @@ RUN apt-get update && apt-get install -y \
  scipy \
  sklearn
  tqdm \
- pyAudioAnalysis
+ pyAudioAnalysis \
+ librosa \
+ scikits.audiolab \
+ pocketsphinx \
+ speechrecognition 
 
-# pip install https://github.com/hipstas/audio-tagging-toolkit
+
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git
+
+# pip install git+git://github.com/danstowell/smacpy.git
+
 
 # Install FFmpeg with mp3 support
 RUN add-apt-repository -y ppa:mc3man/trusty-media \

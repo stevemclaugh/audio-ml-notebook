@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y \
  ndg-httpsclient \
  pyasn1 \
  requests \
+ unicodecsv \
  six \
  pydub \
  numpy \
@@ -56,6 +57,7 @@ RUN apt-get update && apt-get install -y \
  pyAudioAnalysis \
  pocketsphinx \
  speechrecognition \
+ tornado \
  git+git://github.com/hipstas/audio-tagging-toolkit.git
 
 # Install FFmpeg with mp3 support
@@ -68,3 +70,7 @@ ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
 CMD git clone https://github.com/danstowell/smacpy.git
 CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
+
+# Launch container and open notebook like so:
+# docker pull stevemclaugh/audio-ml-notebook
+# docker run -it --name audio_ml_container -p 8888:8888 -v ~/Desktop/sharedfolder:/home/sharedfolder stevemclaugh/audio-ml-notebook

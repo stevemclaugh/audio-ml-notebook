@@ -5,7 +5,6 @@ FROM ubuntu:14.04
 MAINTAINER Steve McLaughlin <stephen.mclaughlin@utexas.edu>
 
 EXPOSE 8888
-
 ENV PYTHONWARNINGS="ignore:a true SSLContext object"
 
 # Install dependencies

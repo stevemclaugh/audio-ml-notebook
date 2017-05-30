@@ -39,7 +39,8 @@ RUN apt-get update && apt-get install -y \
  && pip install \
  six \
  pydub \
- numpy
+ numpy \
+ pyAudioAnalysis
 
 # jupyter \
 
@@ -51,7 +52,7 @@ RUN apt-get update && apt-get install -y \
 #  \
 # tqdm \
 # && pip install \
-# pyAudioAnalysis
+
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git

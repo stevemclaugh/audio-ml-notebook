@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
  curl \
  git \
  swig \
+ gtk \
  software-properties-common \
  build-essential \
  unzip \
@@ -41,12 +42,9 @@ RUN apt-get update && apt-get install -y \
  jupyter \
  numpy \
  scipy \
- matplotlib
+ matplotlib \
+ pandas
 
-
-#RUN pip install -U \
-#  \
-# pandas \
 # sklearn \
 # pydub \
 # tqdm \

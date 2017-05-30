@@ -30,11 +30,11 @@ RUN apt-get update && apt-get install -y \
  libfreetype6-dev \
  libxft-dev
 
-RUN pip install -U pip \
- && pip install -U \
- pyparsing \
- pyOpenSSL \
- ndg-httpsclient 
+RUN pip install -U pip 
+ #&& pip install -U
+
+# pyOpenSSL
+# ndg-httpsclient \
 # pyasn1 \
 # six==1.6.0 \
 # requests \

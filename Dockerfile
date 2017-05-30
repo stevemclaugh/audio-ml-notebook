@@ -34,7 +34,7 @@ RUN apt-get update && apt-get install -y \
  liblapack-dev \
  libatlas-base-dev \
  gfortran \
- && pip install -U pip \
+ && python -m pip install -U pip \
  && pip install -U \
  setuptools \
  pyOpenSSL \
@@ -45,14 +45,13 @@ RUN apt-get update && apt-get install -y \
  six \
  pydub \
  numpy \
- jupyter 
+ jupyter
 
  #scipy \
  #matplotlib \
  #pandas
 
 # sklearn \
-#  \
 # tqdm \
 # && pip install \
 # pyAudioAnalysis

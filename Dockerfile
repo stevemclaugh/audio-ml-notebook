@@ -34,7 +34,7 @@ RUN pip install -U pip \
  && pip install -U \
  pyparsing \
  pyOpenSSL \
-# ndg-httpsclient \
+ ndg-httpsclient 
 # pyasn1 \
 # six==1.6.0 \
 # requests \

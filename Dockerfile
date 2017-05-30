@@ -38,13 +38,14 @@ RUN apt-get update && apt-get install -y \
  && pip install \
  six==1.6.0 \
  && pip install -U \
- jupyter 
-# numpy \
-# scipy
+ jupyter \
+ numpy \
+ scipy \
+ matplotlib
 
 
 #RUN pip install -U \
-# matplotlib \
+#  \
 # pandas \
 # sklearn \
 # pydub \

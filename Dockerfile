@@ -31,13 +31,14 @@ RUN apt-get update && apt-get install -y \
  libxft-dev \
  && pip install -U pip \
  && pip install -U \
- pyOpenSSL
-
-# ndg-httpsclient \
-# pyasn1 \
-# six==1.6.0 \
-# requests \
-# jupyter \
+ pyOpenSSL \
+ ndg-httpsclient \
+ pyasn1 \
+ requests \
+ && pip install \
+ six==1.6.0 \
+ && pip install -U \
+ jupyter 
 # numpy \
 # scipy
 

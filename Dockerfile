@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y \
  gfortran \
  && pip install -U pip \
  && pip install -U \
+ setuptools \
  pyOpenSSL \
  ndg-httpsclient \
  pyasn1 \

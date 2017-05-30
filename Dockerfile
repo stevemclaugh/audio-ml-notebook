@@ -34,7 +34,7 @@ RUN apt-get update && apt-get install -y \
  liblapack-dev \
  libatlas-base-dev \
  gfortran \
- pulseaudio \
+ libpulse-dev \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \
@@ -56,7 +56,7 @@ RUN apt-get update && apt-get install -y \
  librosa \
  scikits.audiolab \
  pocketsphinx \
- speechrecognition 
+ speechrecognition
 
 
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git

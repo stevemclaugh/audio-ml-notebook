@@ -38,9 +38,9 @@ RUN apt-get update && apt-get install -y \
  requests \
  && pip install \
  six \
- jupyter \
  numpy
 
+# jupyter \
 
  #scipy \
  #matplotlib \
@@ -56,9 +56,9 @@ RUN apt-get update && apt-get install -y \
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git
 
 # Install FFmpeg with mp3 support
-#RUN add-apt-repository -y ppa:mc3man/trusty-media \
-# && apt-get update -y \
-# && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
+RUN add-apt-repository -y ppa:mc3man/trusty-media \
+ && apt-get update -y \
+ && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
 # Configure container startup
 ENV SHELL /bin/bash

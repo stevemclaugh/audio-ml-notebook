@@ -43,7 +43,6 @@ RUN apt-get update && apt-get install -y \
  ndg-httpsclient \
  pyasn1 \
  requests \
- && pip install \
  six \
  pydub \
  numpy \

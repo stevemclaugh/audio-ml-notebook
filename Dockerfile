@@ -50,11 +50,10 @@ RUN apt-get update && apt-get install -y \
  pandas \
  matplotlib \
  scipy \
- sklearn
- tqdm \
- pyAudioAnalysis \
+ sklearn \
  librosa \
  scikits.audiolab \
+ pyAudioAnalysis \
  pocketsphinx \
  speechrecognition
 

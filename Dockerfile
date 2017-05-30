@@ -50,14 +50,8 @@ RUN apt-get update && apt-get install -y \
  matplotlib \
  scipy \
  sklearn
-
- #matplotlib \
- #pandas
-
-# sklearn \
-# tqdm \
-# && pip install \
-# pyAudioAnalysis
+ tqdm \
+ pyAudioAnalysis
 
 # pip install https://github.com/hipstas/audio-tagging-toolkit
 # pip install git+git://github.com/hipstas/audio-tagging-toolkit.git

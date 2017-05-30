@@ -56,13 +56,8 @@ RUN apt-get update && apt-get install -y \
  scikits.audiolab \
  pyAudioAnalysis \
  pocketsphinx \
- speechrecognition
-
-
-# pip install git+git://github.com/hipstas/audio-tagging-toolkit.git
-
-# pip install git+git://github.com/danstowell/smacpy.git
-
+ speechrecognition \
+ git+git://github.com/hipstas/audio-tagging-toolkit.git
 
 # Install FFmpeg with mp3 support
 RUN add-apt-repository -y ppa:mc3man/trusty-media \
@@ -72,4 +67,5 @@ RUN add-apt-repository -y ppa:mc3man/trusty-media \
 # Configure container startup
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
-#CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
+CMD git clone https://github.com/danstowell/smacpy.git
+CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root

@@ -40,16 +40,14 @@ RUN apt-get update && apt-get install -y \
  six \
  pydub \
  numpy \
- pyAudioAnalysis
-
-# jupyter \
+ pyAudioAnalysis \
+ jupyter
 
  #scipy \
  #matplotlib \
  #pandas
 
 # sklearn \
-#  \
 # tqdm \
 # && pip install \
 

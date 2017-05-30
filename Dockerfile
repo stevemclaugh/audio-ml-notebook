@@ -38,9 +38,10 @@ RUN apt-get update && apt-get install -y \
  requests \
  && pip install \
  six \
- jupyter
+ jupyter \
+ numpy
 
- #numpy \
+
  #scipy \
  #matplotlib \
  #pandas

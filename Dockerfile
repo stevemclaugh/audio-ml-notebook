@@ -29,13 +29,10 @@ RUN apt-get update && apt-get install -y \
  python-matplotlib \
  libfreetype6-dev \
  libxft-dev \
- && pip install -U pip
+ && pip install -U pip \
+ && pip install -U \
+ pyOpenSSL
 
-
-
-#&& pip install -U
-
-# pyOpenSSL
 # ndg-httpsclient \
 # pyasn1 \
 # six==1.6.0 \

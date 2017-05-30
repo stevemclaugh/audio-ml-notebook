@@ -26,7 +26,6 @@ RUN apt-get update && apt-get install -y \
  libssl-dev \
  ipython \
  ipython-notebook \
- youtube-dl \
  python-matplotlib \
  libfreetype6-dev \
  libxft-dev \
@@ -44,6 +43,7 @@ RUN apt-get update && apt-get install -y \
  pyasn1 \
  requests \
  unicodecsv \
+ youtube-dl \
  six \
  pydub \
  numpy \

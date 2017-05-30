@@ -58,6 +58,7 @@ RUN apt-get update && apt-get install -y \
  pocketsphinx \
  speechrecognition \
  tornado \
+ pathlib \
  git+git://github.com/hipstas/audio-tagging-toolkit.git
 
 # Install FFmpeg with mp3 support

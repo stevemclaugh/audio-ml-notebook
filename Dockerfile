@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
  curl \
  git \
  swig \
- gtk \
+ libgtk-3-dev \
  software-properties-common \
  build-essential \
  unzip \

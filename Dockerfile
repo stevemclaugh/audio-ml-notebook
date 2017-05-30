@@ -43,9 +43,8 @@ RUN apt-get update && apt-get install -y \
  && pip install \
  six \
  pydub \
- numpy
-
-# jupyter \
+ numpy \
+ jupyter 
 
  #scipy \
  #matplotlib \

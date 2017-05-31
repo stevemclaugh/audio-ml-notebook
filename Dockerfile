@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
  build-essential \
  unzip \
  sox \
+ libsox-fmt-mp3 \
  libimage-exiftool-perl \
  python2.7 \
  python-pip \
@@ -38,6 +39,17 @@ RUN apt-get update && apt-get install -y \
  aubio-tools \
  libaubio-dev \
  libaubio-doc \
+ libyaml-dev \
+ libfftw3-dev \
+ libavcodec-dev \
+ libavformat-dev \
+ libavutil-dev \
+ libavresample-dev \
+ libsamplerate0-dev \
+ libtag1-dev \
+ python-numpy-dev \
+ python-numpy \
+ python-yaml \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \

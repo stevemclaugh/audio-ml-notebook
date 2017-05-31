@@ -75,7 +75,7 @@ ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
 CMD git clone https://github.com/danstowell/smacpy.git
 CMD git clone https://github.com/hipstas/audio-tagging-toolkit.git
-CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
+CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token=''
 
 # Launch container and open notebook like so:
 # docker pull stevemclaugh/audio-ml-notebook

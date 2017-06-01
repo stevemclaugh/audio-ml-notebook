@@ -83,6 +83,13 @@ RUN add-apt-repository -y ppa:mc3man/trusty-media \
  && apt-get update -y \
  && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
+# Install essentia
+RUN git clone https://github.com/MTG/essentia.git \
+&& cd essentia \
+&& ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
+&& ./waf \
+&& ./waf install
+
 # Configure container startup
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder

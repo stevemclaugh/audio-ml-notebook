@@ -80,7 +80,7 @@ RUN apt-get update && apt-get install -y \
  tornado \
  pathlib \
  git+git://github.com/hipstas/audio-tagging-toolkit.git \
- git clone https://github.com/MTG/essentia.git \
+ && git clone https://github.com/MTG/essentia.git \
  && cd essentia \
  && ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
  && ./waf \

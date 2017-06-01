@@ -50,6 +50,9 @@ RUN apt-get update && apt-get install -y \
  python-numpy-dev \
  python-numpy \
  python-yaml \
+ cmake \
+ libjack-dev \
+ libasound2-dev
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \
@@ -76,26 +79,40 @@ RUN apt-get update && apt-get install -y \
  speechrecognition \
  tornado \
  pathlib \
- git+git://github.com/hipstas/audio-tagging-toolkit.git
+ git+git://github.com/hipstas/audio-tagging-toolkit.git \
+ git clone https://github.com/MTG/essentia.git \
+ && cd essentia \
+ && ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
+ && ./waf \
+ && ./waf install \
+ && cd ../ \
+ && rm -rf essentia \
+ && git clone https://github.com/marsyas/marsyas.git \
+ &&  cd marsyas \
+ && mkdir build \
+ &&  cd build \
+ && cmake .. \
+ && make \
+ && make install \
+ && cd ../../
+ && rm -rf marsyas \
+ && git clone https://github.com/danstowell/smacpy.git \
+ && git clone https://github.com/hipstas/audio-tagging-toolkit.git \
+ && git clone https://github.com/stevemclaugh/HILT-Audio-ML.git
 
 # Install FFmpeg with mp3 support
 RUN add-apt-repository -y ppa:mc3man/trusty-media \
  && apt-get update -y \
  && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
-# Install essentia
-RUN git clone https://github.com/MTG/essentia.git \
-&& cd essentia \
-&& ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
-&& ./waf \
-&& ./waf install
 
 # Configure container startup
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
-CMD git clone https://github.com/danstowell/smacpy.git
-CMD git clone https://github.com/hipstas/audio-tagging-toolkit.git
+CMD cd /home/sharedfolder/HILT-Audio-ML && git pull origin master
+CMD cd /home/sharedfolder/audio-tagging-toolkit && git pull origin master
 CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token=''
+
 
 # Launch container and open notebook like so:
 # docker pull stevemclaugh/audio-ml-notebook

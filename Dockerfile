@@ -94,7 +94,7 @@ RUN apt-get update && apt-get install -y \
  && cmake .. \
  && make \
  && make install \
- && cd ../../
+ && cd ../../ \
  && rm -rf marsyas \
  && git clone https://github.com/danstowell/smacpy.git \
  && git clone https://github.com/hipstas/audio-tagging-toolkit.git \

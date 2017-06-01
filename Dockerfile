@@ -70,6 +70,7 @@ RUN apt-get update && apt-get install -y \
  librosa \
  aubio \
  scikits.audiolab \
+ scikits.talkbox \
  pyAudioAnalysis \
  pocketsphinx \
  speechrecognition \

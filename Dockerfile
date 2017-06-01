@@ -52,7 +52,7 @@ RUN apt-get update && apt-get install -y \
  python-yaml \
  cmake \
  libjack-dev \
- libasound2-dev
+ libasound2-dev \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \

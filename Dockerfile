@@ -105,7 +105,6 @@ RUN add-apt-repository -y ppa:mc3man/trusty-media \
  && apt-get update -y \
  && apt-get install -y ffmpeg gstreamer0.10-ffmpeg
 
-
 # Configure container startup
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder

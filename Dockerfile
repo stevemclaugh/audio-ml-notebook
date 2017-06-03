@@ -112,7 +112,6 @@ CMD cd /home/sharedfolder/HILT-Audio-ML && git pull origin master
 CMD cd /home/sharedfolder/audio-tagging-toolkit && git pull origin master
 CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token=''
 
-
 # Launch container and open notebook like so:
 # docker pull stevemclaugh/audio-ml-notebook
 # docker run -it --name audio_ml_container -p 8888:8888 -v ~/Desktop/sharedfolder:/home/sharedfolder stevemclaugh/audio-ml-notebook

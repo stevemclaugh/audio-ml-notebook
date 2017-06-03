@@ -79,17 +79,17 @@ RUN apt-get update && apt-get install -y \
  speechrecognition \
  tornado \
  pathlib \
- git+git://github.com/hipstas/audio-tagging-toolkit.git
- 
-# Omitting Essentia and Marsyas for now:
+ git+git://github.com/hipstas/audio-tagging-toolkit.git \
+ && git clone https://github.com/MTG/essentia.git \
+ && cd essentia \
+ && ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
+ && ./waf \
+ && ./waf install \
+ && cd ../ \
+ && rm -rf essentia
+
+# Omitting Marsyas for now:
 #
-# && git clone https://github.com/MTG/essentia.git \
-# && cd essentia \
-# && ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
-# && ./waf \
-# && ./waf install \
-# && cd ../ \
-# && rm -rf essentia \ 
 # && git clone https://github.com/marsyas/marsyas.git \
 # && cd marsyas \
 # && mkdir build \

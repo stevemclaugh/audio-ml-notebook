@@ -94,11 +94,12 @@ RUN apt-get update && apt-get install -y \
  && cmake .. \
  && make \
  && make install \
- && cd ../../ \
+ && cd /home/sharedfolder \
  && rm -rf marsyas \
  && git clone https://github.com/danstowell/smacpy.git \
- && git clone https://github.com/hipstas/audio-tagging-toolkit.git \
- && git clone https://github.com/stevemclaugh/HILT-Audio-ML.git
+ && wget https://github.com/hipstas/audio-tagging-toolkit/blob/master/s
+cripts/Classify_and_Play.zip?raw=true -O Classify_and_Play.zip \
+ && unzip Classify_and_Play.zip
 
 # Install FFmpeg with mp3 support
 RUN add-apt-repository -y ppa:mc3man/trusty-media \

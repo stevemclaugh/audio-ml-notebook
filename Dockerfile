@@ -79,26 +79,26 @@ RUN apt-get update && apt-get install -y \
  speechrecognition \
  tornado \
  pathlib \
- git+git://github.com/hipstas/audio-tagging-toolkit.git \
- && git clone https://github.com/MTG/essentia.git \
- && cd essentia \
- && ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
- && ./waf \
- && ./waf install \
- && cd ../ \
- && rm -rf essentia \
- && git clone https://github.com/marsyas/marsyas.git \
- &&  cd marsyas \
- && mkdir build \
- &&  cd build \
- && cmake .. \
- && make \
- && make install \
- && cd /home/sharedfolder \
- && rm -rf marsyas \
- && git clone https://github.com/danstowell/smacpy.git \
- && wget https://github.com/hipstas/audio-tagging-toolkit/blob/master/scripts/Classify_and_Play.zip?raw=true -O Classify_and_Play.zip \
- && unzip Classify_and_Play.zip
+ git+git://github.com/hipstas/audio-tagging-toolkit.git
+ 
+# Omitting Essentia and Marsyas for now:
+#
+# && git clone https://github.com/MTG/essentia.git \
+# && cd essentia \
+# && ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp \
+# && ./waf \
+# && ./waf install \
+# && cd ../ \
+# && rm -rf essentia \ 
+# && git clone https://github.com/marsyas/marsyas.git \
+# && cd marsyas \
+# && mkdir build \
+# &&  cd build \
+# && cmake .. \
+# && make \
+# && make install \
+# && cd /home/sharedfolder \
+# && rm -rf marsyas
 
 # Install FFmpeg with mp3 support
 RUN add-apt-repository -y ppa:mc3man/trusty-media \
@@ -108,8 +108,7 @@ RUN add-apt-repository -y ppa:mc3man/trusty-media \
 # Configure container startup
 ENV SHELL /bin/bash
 WORKDIR /home/sharedfolder
-CMD cd /home/sharedfolder/HILT-Audio-ML && git pull origin master
-CMD cd /home/sharedfolder/audio-tagging-toolkit && git pull origin master
+CMD cd /home/sharedfolder/ && wget -nc https://github.com/hipstas/audio-tagging-toolkit/blob/master/scripts/Classify_and_Play.zip?raw=true -O Classify_and_Play.zip
 CMD jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token=''
 
 # Launch container and open notebook like so:

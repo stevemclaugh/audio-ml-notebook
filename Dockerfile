@@ -97,8 +97,7 @@ RUN apt-get update && apt-get install -y \
  && cd /home/sharedfolder \
  && rm -rf marsyas \
  && git clone https://github.com/danstowell/smacpy.git \
- && wget https://github.com/hipstas/audio-tagging-toolkit/blob/master/s
-cripts/Classify_and_Play.zip?raw=true -O Classify_and_Play.zip \
+ && wget https://github.com/hipstas/audio-tagging-toolkit/blob/master/scripts/Classify_and_Play.zip?raw=true -O Classify_and_Play.zip \
  && unzip Classify_and_Play.zip
 
 # Install FFmpeg with mp3 support

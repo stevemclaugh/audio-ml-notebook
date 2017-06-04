@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
  libgtk-3-dev \
  software-properties-common \
  build-essential \
+ zip \
  unzip \
  sox \
  libsox-fmt-mp3 \

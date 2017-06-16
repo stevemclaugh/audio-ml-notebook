@@ -73,6 +73,7 @@ RUN apt-get update && apt-get install -y \
  sklearn \
  librosa \
  aubio \
+ moviepy \
  scikits.audiolab \
  scikits.talkbox \
  pyAudioAnalysis \

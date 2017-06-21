@@ -74,13 +74,13 @@ RUN apt-get update && apt-get install -y \
  librosa \
  aubio \
  moviepy \
- scikits.audiolab \
- scikits.talkbox \
  pyAudioAnalysis \
  pocketsphinx \
  speechrecognition \
  tornado \
  pathlib \
+ scikits.talkbox \
+ scikits.audiolab \
  git+git://github.com/hipstas/audio-tagging-toolkit.git \
  && git clone https://github.com/MTG/essentia.git \
  && cd essentia \

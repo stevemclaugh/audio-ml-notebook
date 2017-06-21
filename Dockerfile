@@ -36,7 +36,6 @@ RUN apt-get update && apt-get install -y \
  libatlas-base-dev \
  gfortran \
  libpulse-dev \
- libsndfile1-dev \
  aubio-tools \
  libaubio-dev \
  libaubio-doc \
@@ -54,6 +53,7 @@ RUN apt-get update && apt-get install -y \
  cmake \
  libjack-dev \
  libasound2-dev \
+ libsndfile1-dev \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \

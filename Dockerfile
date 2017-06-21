@@ -54,6 +54,7 @@ RUN apt-get update && apt-get install -y \
  libjack-dev \
  libasound2-dev \
  libsndfile1-dev \
+ praat \
  && python -m pip install -U pip \
  && pip install -U \
  setuptools \

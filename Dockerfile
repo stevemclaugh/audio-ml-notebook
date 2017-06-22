@@ -80,6 +80,7 @@ RUN apt-get update && apt-get install -y \
  speechrecognition \
  tornado \
  pathlib \
+ tflearn \
  scikits.talkbox \
  scikits.audiolab \
  git+git://github.com/hipstas/audio-tagging-toolkit.git \
